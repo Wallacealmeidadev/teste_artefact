@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  background: #fafaf9;
+  color: #242524;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 50rem;
+  margin-inline: auto;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+* { box-sizing: border-box; }
+h1, h2, p { margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.045em; }
+h2 { font-size: 1.15rem; line-height: 1.35; }
+a { color: #205841; text-underline-offset: 0.18em; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { opacity: 0.65; cursor: wait; }
+:focus-visible { outline: 3px solid #386eaa; outline-offset: 3px; }
+.page-heading, .actions, .task-list li { display: flex; align-items: center; gap: 1rem; }
+.page-heading, .task-list li { justify-content: space-between; }
+.page-heading { border-bottom: 2px solid #2e4237; padding-block: 1rem; }
+.button {
+  display: inline-block;
+  background: #205841;
+  color: white;
+  border: 0;
+  border-radius: 0.4rem;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover { background: #184531; }
+.empty { padding-block: 2rem; color: #535d55; }
+.task-list { list-style: none; padding: 0; margin: 0; }
+.task-list li { padding-block: 1.35rem; border-bottom: 1px solid #d4d9d4; align-items: start; }
+.task-details, [role="alert"] { min-width: 0; overflow-wrap: anywhere; }
+.description { white-space: pre-wrap; margin-block: 0.35rem; }
+time, label span { color: #535d55; font-size: 0.9rem; }
+.actions { flex-wrap: wrap; }
+.delete { color: #903a30; background: transparent; border: 0; padding: 0; text-decoration: underline; text-underline-offset: 0.18em; }
+.notice { padding: 0.75rem 1rem; margin-top: 1rem; background: #e4f2e8; color: #15452c; }
+[role="alert"] { color: #903a30; }
+form { max-width: 38rem; display: grid; gap: 0.5rem; }
+label, form .actions { margin-top: 1.25rem; }
+label { font-weight: 600; }
+label span { font-weight: 400; }
+input, textarea { width: 100%; padding: 0.7rem; border: 1px solid #79847d; border-radius: 0.35rem; background: white; }
+textarea { resize: vertical; }
+[aria-invalid="true"] { border-color: #903a30; }
+@media (max-width: 34rem) {
+  .task-list li { flex-direction: column; }
+}
